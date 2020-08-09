@@ -14,6 +14,7 @@ const Welcome =({navigation})=>{
         <View style={{flex:1,justifyContent:"center",alignItems:"center"}}>
             <Image source={kitab} style={{width:200, height:200}} />
             <Text style={{color:"green",fontWeight:"bold"}}>HIZIB NAHDLATUL WATHAN</Text>
+            <Text style={{color:"green",fontWeight:"bold"}}>Versi 1.0.0</Text>
         </View>
     )
 }
