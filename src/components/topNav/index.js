@@ -22,7 +22,7 @@ const styles=StyleSheet.create({
     topNav:{
         height:48, paddingVertical:6, flexDirection: "row",
         paddingHorizontal:20,
-        borderBottomColor:"grey", borderBottomWidth:1,
+        backgroundColor: "#eeeeee",
     },
     searchBox:{
         flex:1,marginRight:5,

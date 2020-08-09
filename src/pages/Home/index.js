@@ -1,38 +1,37 @@
 import React from 'react';
-import { View,Text, StyleSheet, SafeAreaView,FlatList } from 'react-native';
+import { View,Text, StyleSheet, SafeAreaView,FlatList,Image } from 'react-native';
+import DATA from '../../assets/Data';
+import TopNav from '../../components/topNav';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
-const DATA = [
-    {
-      id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-      title: 'First Item',
-    },
-    {
-      id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-      title: 'Second Item',
-    },
-    {
-      id: '58694a0f-3da1-471f-bd96-145571e29d72',
-      title: 'Third Item',
-    },
-  ];
-const Item = ({ title }) => (
-    <View style={styles.item}>
-        <Text style={styles.title}>{title}</Text>
-    </View>
+const Item = ({ judul }) => (
+
+      <TouchableOpacity style={styles.item} onPress={()=>alert(judul)}>
+          <View style={{flexDirection:"row"}}>
+              <Image source={require('../../assets/img/LogoNw.png')} style={{width:40,height:40}} />
+              <View style={{flex:1,justifyContent:"center"}}>
+                <Text style={styles.title}>{judul}</Text>
+              </View>
+          </View>
+      </TouchableOpacity>
 );
 
 const Home =()=>{
-    const renderItem = ({ item }) => (
-        <Item title={item.title} />
+    const renderItem = ({ item,nomor }) => (
+        <Item judul={item.judul} nomor={item.nomor}  />
       );
     return(
-            <SafeAreaView style={styles.container}>
+        <View  style={styles.container}>
+            <TopNav/>
+            <SafeAreaView style={{marginTop:20,}}>
                 <FlatList
                     data={DATA}
                     renderItem={renderItem}
                     keyExtractor={item => item.id}
                 />
             </SafeAreaView>
+        
+        </View>
     )
 };
 
@@ -40,14 +39,17 @@ const styles=StyleSheet.create({
 
     // flatlist
     item: {
-        backgroundColor: '#f9c2ff',
-        padding: 20,
-        marginVertical: 8,
+        marginVertical: 2,
         marginHorizontal: 16,
+        backgroundColor:"green",padding:8,
       },
       title: {
-        fontSize: 32,
+        fontSize: 18, color:"#cdb30c",
+        paddingLeft:8
       },
+      container:{
+       backgroundColor:"#ade498",flex:1,
+      }
 })
 
 export default Home;

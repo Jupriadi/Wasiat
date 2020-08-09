@@ -1,6 +1,5 @@
 import React from 'react';
 import { View,Text, StyleSheet, SafeAreaView,FlatList } from 'react-native';
-import TopNav from './components/topNav';
 import Router from './router';
 import {NavigationContainer} from '@react-navigation/native';
 
@@ -11,8 +10,6 @@ const App =()=>{
       );
     return(
         <View style={styles.container}>
-            <TopNav />
-
             <View style={styles.contentBox}>
                 <NavigationContainer>
                     <Router/>

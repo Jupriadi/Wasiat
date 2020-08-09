@@ -1,5 +1,4 @@
-import React, {useEffect} from 'react';
-import {Text, View} from 'react-native';
+import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {Home,Welcome} from '../pages';
 
@@ -10,8 +9,8 @@ const Router=()=>{
 
     return(
         <Stack.Navigator>
-            <Stack.Screen name="Welcome" component={Welcome} />
-            <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="Welcome" component={Welcome} options={{headerShown:false}}  />
+            <Stack.Screen name="Home" component={Home} options={{headerShown:false}}  />
         </Stack.Navigator>
     )
 }
