@@ -17,6 +17,7 @@ const Home =({navigation,id})=>{
         <View  style={styles.container}>
             <TopNav/>
             <Text style={styles.title}>{id}</Text>
+            
             <DaftarIsi id={id} onPress={()=>GoTo('Surah')}/>
         </View>
     )
