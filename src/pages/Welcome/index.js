@@ -5,7 +5,7 @@ import kitab from '../../assets/img/LogoNw.png';
 const Welcome =({navigation})=>{
     useEffect(()=>{
         setTimeout(()=>{
-            navigation.navigate('Home');
+            navigation.replace('Home');
         },2500)
     });
 

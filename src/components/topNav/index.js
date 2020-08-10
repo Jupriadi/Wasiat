@@ -22,15 +22,15 @@ const styles=StyleSheet.create({
     topNav:{
         height:48, paddingVertical:6, flexDirection: "row",
         paddingHorizontal:20,
-        backgroundColor: "#eeeeee",
+        backgroundColor: "#025B01",
     },
     searchBox:{
         flex:1,marginRight:5,
         position:"relative",
     }, 
     searchInput:{
-        borderWidth:1, borderColor:"grey",borderRadius:20,
-        paddingLeft:50,
+        borderWidth:1, borderColor:"white",borderRadius:20,
+        paddingLeft:50,color:"white",fontSize:14
         
     },
     btnBox:{
