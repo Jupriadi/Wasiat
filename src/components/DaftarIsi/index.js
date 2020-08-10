@@ -10,15 +10,13 @@ const Item = ({ judul,id, onPress}) => {
               <Image source={require('../../assets/img/LogoNw.png')} style={{width:40,height:40}} />
               <View style={{flex:1,justifyContent:"center"}}>
                 <Text style={styles.title}>{judul}</Text>
-                <Text style={styles.title}>{id}</Text>
               </View>
           </View>
       </TouchableOpacity>
   )
 };
 
-const DaftarIsi =({onPress,key})=>{
-   
+const DaftarIsi =({onPress})=>{
 
     const renderItem = ({ item}) => (
         <Item judul={item.judul} id={item.id}  onPress={onPress} />
@@ -29,7 +27,7 @@ const DaftarIsi =({onPress,key})=>{
                 <FlatList
                     data={DATA}
                     renderItem={renderItem}
-                    keyExtractor={item => item.id}
+                    keyExtractor={item => item.id }
                 />
             </SafeAreaView>
         

@@ -53,7 +53,7 @@ const DATA = [
     {
     
         id:'12',
-        judul :'Shalawat Miftahibabfirahmatillah'
+        judul :'Shalawat Miftahibabfirahmatillah',
     },
     {
     

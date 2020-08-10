@@ -1,18 +1,18 @@
 import React,{useEffect} from 'react';
 import {Text, View, Image} from 'react-native';
-import kitab from '../../assets/img/LogoNw.png';
+import Logo from '../../assets/svg/logoNw.svg';
 
 const Welcome =({navigation})=>{
     useEffect(()=>{
         setTimeout(()=>{
             navigation.replace('Home');
-        },2500)
+        },4000)
     });
 
     return (
 
         <View style={{flex:1,justifyContent:"center",alignItems:"center"}}>
-            <Image source={kitab} style={{width:150, height:150}} />
+            <Logo width={140} height={140} />
             <Text style={{color:"green",fontWeight:"bold"}}>HIZIB NAHDLATUL WATHAN</Text>
             <Text style={{color:"grey",fontWeight:"bold"}}>Versi 1.0.0</Text>
         </View>
